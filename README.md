@@ -1,5 +1,7 @@
 # vue-chat
 
+xuegao
+
 ## Project setup
 ```
 npm install
