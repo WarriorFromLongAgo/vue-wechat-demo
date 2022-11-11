@@ -427,6 +427,7 @@ const mutations = {
     state.systemFileIcon = value;
   },
   showImgWindow(state, value) {
+    console.log(" showImgWindow ")
     state.imgWindow.showImgWindow = value.showImgWindow;
     if (!value.showImgWindow) {
       state.imgWindow.src = null;

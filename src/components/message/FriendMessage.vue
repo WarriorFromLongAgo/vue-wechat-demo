@@ -9,6 +9,7 @@
             : selectedChat.info.remark
         }}</span>
       </div>
+<!--      右边的三个点，更多-->
       <i
         style="cursor: pointer"
         @click="showChatInfo"

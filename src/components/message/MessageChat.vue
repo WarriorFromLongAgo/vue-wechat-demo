@@ -64,6 +64,7 @@ export default {
     ...mapState({ imgWindow: (state) => state.system.imgWindow }),
     ...mapGetters({ selectedChat: "chat/selectedChat" }),
     getWidth() {
+      console.log(" getWidth ")
       return (width, height) => {
         let result = {
           width: width,

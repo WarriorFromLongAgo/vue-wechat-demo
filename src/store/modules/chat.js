@@ -203,6 +203,7 @@ const mutations = {
   },
   // 得知用户当前选择的是哪个对话。便于匹配对应的对话框
   selectSession(state, value) {
+    console.log(" selectSession ")
     state.selectChatId = value;
     let chat = state.chatlist.find(session => session.chatId === value);
     console.log(value);
@@ -411,6 +412,7 @@ const getters = {
   },
   // 筛选出含有搜索值的聊天列表
   searchedChatlist(state, getters, rootState) {
+    console.log("searchedChatlist ")
     let remarkSessions = state.chatlist.filter(sessions => sessions.info.remark != null && sessions.info.remark.includes(rootState.system.searchText));
     let sessions = state.chatlist.filter(sessions => sessions.info.nickname.includes(rootState.system.searchText));
     let add = sessions.filter(x => !remarkSessions.find((y) => x.chatId === y.chatId));

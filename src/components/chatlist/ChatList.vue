@@ -134,6 +134,7 @@ export default {
     }),
     // 将内容中属于表情的部分替换成emoji图片标签
     replaceFace(msg) {
+      console.log(" msg ", msg)
       if (msg === "") {
         return "";
       }
@@ -159,6 +160,9 @@ export default {
       return con;
     },
     openMenu(e, data) {
+      let newVar = (state) => state.chat.selectChatId;
+      console.log("selectChatId ", newVar);
+      console.log("openMenu openMenu");
       this.menuOffset.offsetLeft = this.$el.getBoundingClientRect().left; // container margin left
       this.menuOffset.offsetWidth = this.$el.offsetWidth; // container width
       this.menuOffset.clientX = e.clientX;
