@@ -40,6 +40,7 @@
               :src="isSelf(item.username) ? user.avatar : selectedChat.info.avatar"
             />
             <div class="content" :class="{ 'text-msg': item.type == 1 }">
+<!--              点击图片放大的时候-->
               <img
                 class="img-msg"
                 @click="
@@ -231,6 +232,7 @@ export default {
       return con;
     },
     downloadFile(src) {
+      console.log(" downloadFile ")
       window.open(src);
     },
   },
